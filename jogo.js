@@ -1,6 +1,5 @@
 /* Thiago Carvalho Duarte - Turma 2B (Líder)
    Munir Oliveira Aby Faraj - Turma 2B
-   Etapa 03*/
 let value = 0;
 let cor = 0
 var x=400 
