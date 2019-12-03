@@ -1,21 +1,31 @@
-/* Thiago Carvalho Duarte - Turma 2B (Líder)
-   Munir Oliveira Aby Faraj - Turma 2B
-let value = 0;
-let cor = 0
-var x=400 
-var y=300;
+/* Thiago Carvalho Duarte - Turma 2B (Líder) (Professor, não  consegui fazer uma versão final e funcional do game, desculpa, mas por falta de procura mesmo, porque o senhor sempre se dispôs, abraço!)
+Munir Aby Faraj - Turma 2B*/ 
+
+x=135
+var figura
+var vida
+var img;
+var colisao
+var tiro
+let map [ 
+[1,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,1]
+[1,0,0,0,0,0,0,0,0,0,0,0,0,1]
+ ];
+function preload() {
+  img = loadImage('https://raw.githubusercontent.com/ect-info/lop/master/Sprites/Personagens/Naves/200%20sprites%20de%20naves/ship_117.png');
+}
 function setup() {
-  createCanvas(x,y);
-  background(150,200,300)
+  createCanvas(400,300);
+   background(150,200,300) 
+
 fill('yellow')
-  rect(160, -50, 55, 55)
-  ellipse(188, -40, 90, 90)
-  ellipse(188, -40, 100, 50)
-  ellipse(188, -60, 100, 140)
- rect(160, 0, 55, 65)
-  ellipse(188, 70, 60, 50)  
-  rect(250, 20, 120, 40)
-  rect(48,10,55,55)
+ 
+
   rect(0,0,25,25)
   rect(0,25,25,25)
   rect(0,50,25,25)
@@ -40,19 +50,18 @@ fill('yellow')
   rect(375,225,25,25)
   rect(375,250,25,25)
   rect(375,275,25,25)
+  fill('black') 
+  text("Figura: " + figura, 270, 30);
+  text("Vidas: " + vida, 55, 30);
 }
   
 function draw() {
-  fill(value);
- rect(135,275, 120, 10)
+ fill ('yellow')
+  rect(x,275, 120, 10)
+  if ( keyIsDown(LEFT_ARROW)) {
+    x= x -3
+  }else if( keyIsDown(RIGHT_ARROW)){
+     x= x + 3
 }
-function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
-    value = 210;
-  } else if (keyCode === RIGHT_ARROW) {
-    value = 70;
-  } else if (keyCode === UP_ARROW){
-    value = 150
-} else if (keyCode === DOWN_ARROW){
-  value = 400
-}}
+ image(img,90,-60)
+}		
