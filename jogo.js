@@ -1,4 +1,4 @@
-/* Thiago Carvalho Duarte - Turma 2B (Líder) (Professor, não  consegui fazer uma versão final e funcional do game, desculpa, mas por falta de procura mesmo, porque o senhor sempre se dispôs, abraço!)
+/* Thiago Carvalho Duarte - Turma 2B (Líder) 
 Munir Aby Faraj - Turma 2B*/ 
 
 x=135
